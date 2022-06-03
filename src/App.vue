@@ -14,26 +14,32 @@ export default {
   },
   data(){
     return{
-      items : []
+      items : [],
+      cart : []
     }
   },
   mounted() {
     // console.log(data)
     this.items = data
   },
+  methods: {
+    addCartItem(item){
+      this.cart.push(item)
+    }
+  }
 };
 </script>
 
 <template>
-  <div id="app container mx-auto">
+  <div id="app container mx-auto" class="bg-gray-900">
     <div>
       <navbar></navbar>
       
     </div>
     <section class="container">
-      <div class="container flex mx-auto mt-5">
-        <producs :items = "items"></producs>
-        <cart></cart>
+      <div class="container flex mx-auto mt-5"> 
+        <producs @newItemAdded="addCartItem" :items = "items"></producs>
+        <cart :items ="cart"></cart>
         
       </div>
     </section>

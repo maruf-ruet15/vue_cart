@@ -27,3 +27,5 @@ npm run dev
 ```sh
 npm run build
 ```
+note from maruf:
+: is given before src or others when we dynamicalli change link or value
