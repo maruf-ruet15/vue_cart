@@ -32,7 +32,7 @@ export default {
         <li class="flex items-start justify-between">
           <h3>
             {{ item.title }}
-            <span class="text-sm dark:text-violet-400 mr-3">x3</span><button @click="itemDelete(index)" class="text-bold p-1 bg-red-900">-</button>
+            <span class="text-sm dark:text-violet-400 mr-3">x3</span><button @click="itemDelete(index)" class="text-bold font-bold text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3  text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">-</button>
           </h3>
           <div class="text-right">
             <span class="block">$ {{ item.price }}</span>
