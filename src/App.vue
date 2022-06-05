@@ -23,8 +23,16 @@ export default {
     this.items = data
   },
   methods: {
+    search(keyword){
+     this.items = data.filter(item =>{
+        return item.title.toLowerCase().indexOf(keyword.toLowerCase()) != -1
+      })
+    },
     addCartItem(item){
       this.cart.push(item)
+    },
+    deleteCartItem(index){
+      this.cart.splice(index,1)
     }
   }
 };
@@ -33,13 +41,13 @@ export default {
 <template>
   <div id="app container mx-auto" class="bg-gray-900">
     <div>
-      <navbar></navbar>
+      <navbar @search="search" ></navbar>
       
     </div>
     <section class="container">
       <div class="container flex mx-auto mt-5"> 
         <producs @newItemAdded="addCartItem" :items = "items"></producs>
-        <cart :items ="cart"></cart>
+        <cart @itemDeleted="deleteCartItem" :items ="cart"></cart>
         
       </div>
     </section>

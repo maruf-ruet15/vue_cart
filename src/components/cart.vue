@@ -9,7 +9,12 @@ export default {
       });
       return total
     }
-  }
+  },
+  methods: {
+    itemDelete(index){
+      this.$emit("itemDeleted",index)
+    }
+  },  
 };
 </script>
 
@@ -27,7 +32,7 @@ export default {
         <li class="flex items-start justify-between">
           <h3>
             {{ item.title }}
-            <span class="text-sm dark:text-violet-400">x3</span>
+            <span class="text-sm dark:text-violet-400 mr-3">x3</span><button @click="itemDelete(index)" class="text-bold p-1 bg-red-900">-</button>
           </h3>
           <div class="text-right">
             <span class="block">$ {{ item.price }}</span>
