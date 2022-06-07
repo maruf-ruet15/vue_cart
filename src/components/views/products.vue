@@ -1,6 +1,11 @@
 <script default>
 export default {
-  props: ["items"],
+  // props: ["items"],
+  data(){
+    return{
+      items: []
+    }
+  },
   methods: {
     addToCart(item){
       this.$emit("newItemAdded",item)
@@ -9,7 +14,7 @@ export default {
 };
 </script>
 <template>
-  <div class="item w-3/4">
+  <div class="item">
     <div class="grid grid-cols-3">
       <div
         v-for="(item, index) in items"

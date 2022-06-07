@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div class="cart w-1/4 ml-3">
+  <div class="cart ml-3">
     <div
       class="container flex flex-col max-w-md p-6 space-y-4 divide-y sm:w-96 sm:p-10 divide-gray-700 dark:bg-gray-900 dark:text-gray-100"
     >
@@ -52,37 +52,6 @@ export default {
           Go to checkout
         </button>
       </div>
-      <!-- <div class="pt-4 space-y-2">
-              <div>
-                <div class="flex justify-between">
-                  <span>Subtotal</span>
-                  <span>$21.50</span>
-                </div>
-              </div>
-              <div class="flex justify-between">
-                <span>Discount</span>
-                <span>-$4.30</span>
-              </div>
-            </div>
-            <div class="pt-4 space-y-2">
-              <div class="flex justify-between">
-                <span>Service fee</span>
-                <span>$0.50</span>
-              </div>
-              <div class="flex flex-col">
-                <div class="flex justify-between">
-                  <span>Delivery fee</span>
-                  <span>$4.00</span>
-                </div>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  class="text-xs hover:underline dark:text-violet-400"
-                  >How do our fees work?</a
-                >
-              </div> -->
-      
-      <!-- </div> -->
     </div>
   </div>
 </template>
