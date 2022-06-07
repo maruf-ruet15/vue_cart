@@ -26,7 +26,7 @@ export default {
           />
           <span
             class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-            >M@ruf Car House</span
+            >M@ruf Pizza House</span
           >
         </a>
       </div>

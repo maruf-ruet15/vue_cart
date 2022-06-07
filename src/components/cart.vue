@@ -19,9 +19,9 @@ export default {
 </script>
 
 <template>
-  <div class="cart ml-3">
+  <div class="cart mr-5">
     <div
-      class="container flex flex-col max-w-md p-6 space-y-4 divide-y sm:w-96 sm:p-10 divide-gray-700 dark:bg-gray-900 dark:text-gray-100"
+      class="container flex flex-col max-w-md p-6 space-y-4 divide-y sm:w-96 sm:p-7 divide-gray-700 dark:bg-gray-900 dark:text-gray-100"
     >
       <h2 class="text-2xl font-semibold">Order items</h2>
       <ul
@@ -31,7 +31,7 @@ export default {
       >
         <li class="flex items-start justify-between">
           <h3>
-            {{ item.title }}
+            {{ item.name }}
             <span class="text-sm dark:text-violet-400 mr-3">x3</span><button @click="itemDelete(index)" class="text-bold font-bold text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3  text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">-</button>
           </h3>
           <div class="text-right">
