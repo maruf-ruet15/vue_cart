@@ -20,7 +20,7 @@ export default {
         .get("https://ecom-rest-apis.herokuapp.com/api/products")
         .then((response) => {
           self.items = response.data;
-          console.log(response);
+          // console.log(response);
         });
     },
   },
@@ -74,18 +74,23 @@ export default {
 
         <div class="px-5 pb-3">
           <div class="flex items-center">
-            <span class="text-3xl mr-5 font-bold text-gray-900 dark:text-white"
-              >$</span
-            >
-            <span class="text-3xl font-bold text-gray-900 dark:text-white">{{
-              item.price
-            }}</span>
-            <a
-              href="#"
-              @click="addToCart(item)"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >Add to cart</a
-            >
+            <div class="w-2/3">
+              <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                >$</span
+              >
+              <span
+                class="text-3xl font-bold text-gray-900 dark:text-white ml-4"
+                >{{ item.price }}</span
+              >
+            </div>
+            <div class="w-1/3">
+              <a
+                href="#"
+                @click="addToCart(item)"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-1 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >Add to cart</a
+              >
+            </div>
           </div>
         </div>
       </div>

@@ -37,7 +37,13 @@ export default {
 
       <div class="w-4/6 mt-5">
         <h5
-          class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+          class="
+            text-xl
+            font-semibold
+            tracking-tight
+            text-gray-900
+            dark:text-white
+          "
         >
           {{ item.name }}
         </h5>
@@ -54,7 +60,17 @@ export default {
               ></path>
             </svg>
             <span
-              class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3"
+              class="
+                bg-blue-100
+                text-blue-800 text-xs
+                font-semibold
+                mr-2
+                px-2.5
+                py-0.5
+                rounded
+                dark:bg-blue-200 dark:text-blue-800
+                ml-3
+              "
               >5</span
             >
           </div>
@@ -79,14 +95,26 @@ export default {
           <a
             href="#"
             @click="addToCart(item)"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            class="
+              text-white
+              bg-blue-700
+              hover:bg-blue-800
+              focus:ring-4 focus:outline-none focus:ring-blue-300
+              font-medium
+              rounded-lg
+              text-sm
+              px-5
+              py-2.5
+              text-center
+              dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+            "
             >Add to cart</a
           >
         </div>
       </div>
     </div>
   </div>
-  <h3 v-else> Loading...</h3>
+  <h3 v-else>Loading...</h3>
 </template>
 
 <style></style>

@@ -19,9 +19,9 @@ export default {
 </script>
 
 <template>
-  <div class="cart mr-5">
+  <div class="cart">
     <div
-      class="container flex flex-col max-w-md p-6 space-y-4 divide-y sm:w-96 sm:p-7 divide-gray-700 dark:bg-gray-900 dark:text-gray-100"
+      class="p-6 space-y-4 divide-y sm:w-96 sm:p-10 divide-gray-700 dark:bg-gray-900 dark:text-gray-100"
     >
       <h2 class="text-2xl font-semibold">Order items</h2>
       <ul

@@ -46,7 +46,7 @@ export default {
       <navbar @search="search"></navbar>
     </div>
 
-    <div class="flex">
+    <div class="flex container br-5">
       <div class="w-3/4 mx-auto mt-5 mb-5 mr-5">
         <router-view
           class=""
@@ -56,7 +56,7 @@ export default {
       </div>
 
       
-      <div class="w-1/4 m-6">
+      <div class="w-1/4 m-6 container">
         <cart
           class=""
           @itemDeleted="deleteCartItem"
