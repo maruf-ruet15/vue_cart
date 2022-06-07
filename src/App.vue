@@ -55,7 +55,6 @@ export default {
         ></router-view>
       </div>
 
-      
       <div class="w-1/4 m-6 container">
         <cart
           class=""
@@ -65,6 +64,7 @@ export default {
       </div>
     </div>
   </div>
+  
 </template>
 
 <style></style>
