@@ -1,4 +1,5 @@
 <script default>
+import axios from 'axios'
 export default {
   // props: ["items"],
   data(){
@@ -6,9 +7,19 @@ export default {
       items: []
     }
   },
+  mounted(){
+    this.fetchInventory()
+  },
   methods: {
     addToCart(item){
       this.$emit("newItemAdded",item)
+    },
+    fetchInventory(){
+      var self = this
+      axios.get('https://ecom-rest-apis.herokuapp.com/api/products').then(response=>{
+        self.items = response.data
+        console.log(response)
+      })
     }
   }
 };
@@ -30,7 +41,7 @@ export default {
             <h5
               class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
             >
-              {{ item.title }}
+              {{ item.name }}
             </h5>
           </a>
           <div class="flex items-center mt-2.5 mb-5">
@@ -46,7 +57,7 @@ export default {
             </svg>
             <span
               class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3"
-              >{{ item.star }}</span
+              >5</span
             >
           </div>
           <div class="flex justify-between items-center">
