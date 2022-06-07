@@ -4,22 +4,30 @@ export default {
   // props: ["items"],
   data() {
     return {
-      items: [],
+      loading : true,
+      // items: [],
     };
+  },
+  computed: {
+    items(){
+      return this.$store.getters.getProducts
+    }
   },
   mounted() {
     this.fetchItems();
   },
   methods: {
     addToCart(item) {
-      this.$emit("newItemAdded", item);
+      // this.$emit("newItemAdded", item);
+      this.$store.commit('addToCart',item)
     },
     fetchItems() {
       var self = this;
       axios
         .get("https://ecom-rest-apis.herokuapp.com/api/products")
         .then((response) => {
-          self.items = response.data;
+          // self.items = response.data;
+          self.$store.commit('setProductsState',response.data)
           // console.log(response);
         });
     },

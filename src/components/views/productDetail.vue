@@ -22,6 +22,9 @@ export default {
           console.log(response);
         });
     },
+    addToCart(item){
+      this.$store.commit('addToCart',item)
+    }
   },
 };
 </script>

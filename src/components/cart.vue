@@ -1,6 +1,7 @@
 <script default>
 export default {
-  props: ["items"],
+  // props: ["items"],
+  //props is not using because we use state management with vuex
   computed: {
     sumOfPrice() {
       var total = 0;
@@ -8,11 +9,20 @@ export default {
         total = total + parseFloat(element.price);
       });
       return total
+    },
+    items(){
+      return this.$store.getters.getCart
     }
   },
   methods: {
     itemDelete(index){
-      this.$emit("itemDeleted",index)
+      // this.$emit("itemDeleted",index)
+      this.$store.commit('removeItem',index)
+    },
+    checkout(){
+      if(confirm("Are you sure you want to checkout ?")){
+        this.$store.commit('clearCart')
+      }
     }
   },  
 };
@@ -45,7 +55,8 @@ export default {
           <span>Total</span>
           <span class="font-semibold">${{ sumOfPrice }}</span>
         </div>
-        <button
+        <button v-if="items.length > 0"
+          @click="checkout"
           type="button"
           class="w-full py-2 font-semibold border rounded dark:bg-violet-400 dark:text-gray-900 dark:border-violet-400"
         >
