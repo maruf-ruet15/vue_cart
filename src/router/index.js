@@ -6,7 +6,7 @@ import productDetail from '../components/views/productDetail.vue'
 export const routes = [
     {
         path : '',
-        component : home
+        component : products
     },
     {
         // path : '/about/:id',
@@ -18,8 +18,8 @@ export const routes = [
         component : service
     },
     {
-        path : '/products',
-        component : products
+        path : '/home',
+        component : home
     },
     {
         path : '/productDetail/:_id',

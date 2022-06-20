@@ -35,7 +35,7 @@ export default {
 };
 </script>
 <template>
-  <div class="item">
+  <div class="item m-9">
     <div class="grid grid-cols-3">
       <div
         v-for="(item, index) in items"
